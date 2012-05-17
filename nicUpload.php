@@ -7,20 +7,14 @@
  * Do not remove this copyright message
  *
  * nicUpload Reciever Script PHP Edition
- * @description: Save images uploaded for a users computer to a directory, and
- * return the URL of the image to the client for use in nicEdit
+ * @description: upload image to imageshack and return the URL of the image to the client for use in nicEdit
  * @author: Brian Kirchoff <briankircho@gmail.com>
  * @author: Jean-Marie Tinghir <jmtinghir.net>
- * @sponsored by: DotConcepts (http://www.dotconcepts.net)
  * @version: 0.9.0
  */
-require_once(realpath(dirname(__FILE__)."/../util/imageshack.class.php"));
-require_once(realpath(dirname(__FILE__)."/../util/util.php"));
+require_once(realpath(dirname(__FILE__)."/imageshack.class.php"));
 
-session_start();
-$site = initSite();
-
-define('API_KEY', IMAGESHACK_API_KEY);
+define('API_KEY', 'Your Imageshack API key');
 
 $nicupload_allowed_extensions = array('jpg','jpeg','png','gif','bmp');
 
